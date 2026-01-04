@@ -1,0 +1,23 @@
+#include<iostream>
+#include<stack>
+using namespace std;
+
+bool isBalance(string s){
+    if(s.size()%2 != 0) return false;
+    stack<char> st;
+    for(int i = 0 ; i<s.size() ; i++){
+        if(s[i] == '(') st.push(s[i]);
+        else{
+            if(st.size() == 0) return false;
+            else st.pop();
+        }
+    }
+    if(st.size() == 0) return true;
+    else return false;
+}
+
+int main(){
+    string s1 = "())()()";
+    if(isBalance(s1)) cout<<"True";
+    else cout<<"False";
+}
