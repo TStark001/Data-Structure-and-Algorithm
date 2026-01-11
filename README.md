@@ -28,6 +28,11 @@ Data Structure&Algorithm/
 ├── 18_Stack
 └── README.md
 
+## 🚀 LeetCode Profile
+
+[![LeetCode Stats] https://leetcode.com/u/stark_0001/
+
+
 ---
 
 ## 🛠️ Requirements
