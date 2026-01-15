@@ -30,7 +30,7 @@ Data Structure&Algorithm/
 
 ## 🚀 LeetCode Profile
 
-[![LeetCode Stats] https://leetcode.com/u/stark_0001/
+LeetCode Stats -> https://leetcode.com/u/stark_0001/
 
 
 ---
