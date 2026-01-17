@@ -26,6 +26,7 @@ Data Structure&Algorithm/
 ├── 16_SpecialAlgorithm
 ├── 17_LinkedList
 ├── 18_Stack
+├── 19_Queue
 └── README.md
 
 ## 🚀 LeetCode Profile
