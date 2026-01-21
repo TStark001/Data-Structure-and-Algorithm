@@ -23,15 +23,22 @@ public:
         b++;
     }
     void pop(){
-        if(f-b == 0){
+        if(b-f == 0){
             cout<<"Queue is EMPTY!"<<endl;
             return;
         }
         f++;
     }
     int front(){
-        if(f-b == 0){
+        if(b-f == 0){
             cout<<"Queue is EMPTY!"<<endl;
+            return -1;
+        }
+        return arr[b-1];
+    }
+    int back(){
+        if(b-f == 0){
+            cout<<"Queue is EMPTY!";
             return -1;
         }
         return arr[b-1];
@@ -40,7 +47,7 @@ public:
         return b-f;
     }
     bool empty(){
-        if(f-b == 0) return true;
+        if(b-f == 0) return true;
         else return false;
     }
     void display(){
