@@ -20,21 +20,11 @@ bool validPerfectSqaure(int x)
 {
     int lo = 1;
     int hi = x;
-    while (lo <= hi)
-    {
+    while (lo <= hi){
         long long mid = lo + (hi - lo) / 2;
-        if ((long long)mid * mid == x)
-        {
-            return true;
-        }
-        else if ((long long)mid * mid < x)
-        {
-            lo = mid + 1;
-        }
-        else
-        {
-            hi = mid - 1;
-        }
+        if ((long long)mid * mid == x) return true;
+        else if ((long long)mid * mid < x) lo = mid + 1;
+        else hi = mid - 1;
     }
     return false;
 }
