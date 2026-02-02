@@ -42,17 +42,12 @@
 #include <climits>
 #include <vector>
 using namespace std;
-bool check(int mid, vector<int> &arr, int days)
-{
+bool check(int mid, vector<int> &arr, int days){
     int n = arr.size();
     int m = mid;
     int count = 1;
-    for (int i = 0; i < n; i++)
-    {
-        if (m >= arr[i])
-        {
-            m -= arr[i];
-        }
+    for (int i = 0; i < n; i++){
+        if (m >= arr[i]) m -= arr[i];
         else
         {
             count++;
@@ -60,36 +55,28 @@ bool check(int mid, vector<int> &arr, int days)
             m -= arr[i];
         }
     }
-    if (count > days)
-        return false;
-    else
-        return true;
+    if (count > days) return false;
+    else return true;
 }
 
-int shipWithinDay(vector<int> &arr, int days)
-{
+int shipWithinDay(vector<int> &arr, int days){
     int n = arr.size();
     int max = INT_MIN;
     int sum = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (max < arr[i])
-            max = arr[i];
+    for (int i = 0; i < n; i++){
+        if (max < arr[i]) max = arr[i];
         sum += arr[i];
     }
     int lo = max;
     int hi = sum;
     int minCapacity = sum;
-    while (lo <= hi)
-    {
+    while (lo <= hi){
         int mid = lo + (hi - lo) / 2;
-        if (check(mid, arr, days))
-        {
+        if (check(mid, arr, days)){
             minCapacity = mid;
             hi = mid - 1;
         }
-        else
-            lo = mid + 1;
+        else lo = mid + 1;
     }
     return minCapacity;
 }
