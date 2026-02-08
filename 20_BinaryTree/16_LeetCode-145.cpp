@@ -75,7 +75,7 @@ void levelOrderQueue(Node* root){
     }
     cout<<endl;
 }
-vector<int> preorderTraversal(Node* root) {
+vector<int> postorderTraversal(Node* root) {
     vector<int> ans;
     stack<Node*> st;
     if(root!=NULL) st.push(root);
@@ -95,9 +95,9 @@ int main(){
     Node* root = construct(v);
     cout << "Level Order Traversal: ";
     levelOrderQueue(root);
-    vector<int> preorder = preorderTraversal(root);
+    vector<int> postorder = postorderTraversal(root);
     cout << "PostOrder Traversal: ";
-    for(int x : preorder){
+    for(int x : postorder){
         cout << x << " ";
     }
     cout << endl;
