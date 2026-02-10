@@ -16,19 +16,18 @@ public:
         this->right = NULL;
     }
 };
-Node* construct(vector<int> &v){
-    int n = v.size();
+Node* construct(int arr[] , int n){
     queue<Node*> q;
-    Node* root = new Node(v[0]);
+    Node* root = new Node(arr[0]);
     q.push(root);
     int i = 1 , j = 2;
     while(q.size()>0 and i<n){
         Node* temp = q.front();
         q.pop();
         Node *l , *r;
-        if(v[i]!=INT_MIN) l = new Node(v[i]);
+        if(arr[i]!=INT_MIN) l = new Node(arr[i]);
         else l = NULL;
-        if(j!=n and v[j]!=INT_MIN) r = new Node(v[j]);
+        if(j!=n and arr[j]!=INT_MIN) r = new Node(arr[j]);
         else r = NULL;
 
         temp->left = l;
@@ -56,7 +55,8 @@ void levelOrderQueue(Node* root){
 
 int main(){
     // construct
-    vector<int> v = {1,2,3,4,5,INT_MIN,6,INT_MIN,INT_MIN,7,8,9};
-    Node* root = construct(v);
+    int arr[]= {1,2,3,4,5,INT_MIN,6,INT_MIN,INT_MIN,7,8,9};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    Node* root = construct(arr,n);
     levelOrderQueue(root);
 }
