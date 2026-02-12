@@ -38,7 +38,8 @@ public:
         this->right = NULL;
     }
 };
-Node* construct(int arr[] , int n){
+Node* construct(vector<int>& arr){
+    int n = arr.size();
     queue<Node*> q;
     Node* root = new Node(arr[0]);
     q.push(root);
@@ -79,9 +80,8 @@ vector<int> rightSideView(Node* root) {
 }
 
 int main(){
-    int arr[] = {1,2,3,4,INT_MIN,INT_MIN,INT_MIN,5};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    Node* root = construct(arr,n);
+    vector<int> v = {1,2,3,4,INT_MIN,INT_MIN,INT_MIN,5};
+    Node* root = construct(v);
     vector<int> result = rightSideView(root);
     for(int x : result){
         cout<<x<<" ";
