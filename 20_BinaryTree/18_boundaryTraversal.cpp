@@ -30,7 +30,7 @@ Node* construct(int arr[] , int n){
         Node *l , *r;
         if(arr[i]!=INT_MIN) l = new Node(arr[i]);
         else l = NULL;
-        if(j!=n and arr[j]!=INT_MIN) r = new Node(arr[j]);
+        if(j<n and arr[j]!=INT_MIN) r = new Node(arr[j]);
         else r = NULL;
 
         temp->left = l;
@@ -91,11 +91,11 @@ void boundary(Node* root){
 
 int main(){
     // construct
-    int arr[] = {1,2,3,4,5,INT_MIN,6,7,INT_MIN,8,INT_MIN,9,10,INT_MIN,11,INT_MIN,12,INT_MIN,13,INT_MIN,14,15,16,INT_MIN,17,INT_MIN, INT_MIN,18,INT_MIN,19,INT_MIN,INT_MIN,20,21,22,23,INT_MIN,24,25,26,27,INT_MIN,INT_MIN,28};
+    int arr[] = {1,2,3,4,5,INT_MIN,6,7,INT_MIN,8,INT_MIN,9,10,INT_MIN,11,INT_MIN,12,INT_MIN,13,INT_MIN,14,15,16,INT_MIN,17,INT_MIN, INT_MIN,18,INT_MIN,19,INT_MIN,INT_MIN,INT_MIN,20,21,22,23,INT_MIN,24,25,26,27,INT_MIN,INT_MIN,28};
     int n = sizeof(arr)/sizeof(arr[0]);
     Node* root = construct(arr,n);
-    /* cout<<"Display Tree Below :- "<<endl;
-    levelOrder(root); */
+    cout<<"Display Tree Below :- "<<endl;
+    levelOrder(root);
     cout<<"Display the left boundary :- ";
     leftBoundary(root);
     cout<<endl<<"Display the leaf Node :- ";
