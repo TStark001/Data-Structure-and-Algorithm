@@ -67,7 +67,7 @@ Node* construct(vector<int>& v){
     }
     return root;
 }
-bool hasPathSum(Node* root , int targetSum){
+bool hasPathSum(Node* root , int targetSum) {
     if(root == NULL) return false;
     if(root->left == NULL and root->right == NULL){
         if(root->val == targetSum){
