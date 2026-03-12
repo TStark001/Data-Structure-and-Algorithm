@@ -43,17 +43,13 @@ Node* construct(vector<int>& v){
 Node* min(Node* root){
     if(root == NULL) return NULL;
     Node* minNode = root;
-    while(minNode->left!=NULL){
-        minNode = minNode->left;
-    }
+    while(minNode->left!=NULL) minNode = minNode->left;
     return minNode;
 }
 Node* max(Node* root){
     if(root == NULL) return NULL;
     Node* maxNode = root;
-    while(maxNode->right!=NULL){
-        maxNode = maxNode->right;
-    }
+    while(maxNode->right!=NULL) maxNode = maxNode->right;
     return maxNode;
 }
 
