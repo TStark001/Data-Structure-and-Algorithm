@@ -20,7 +20,7 @@ int main(){
     cout<<"Size of Sets = "<<s.size()<<endl;
     int target = 4;
     /*
-        s.fing() -> it searches in the set , and if 
+        s.find() -> it searches in the set , and if 
                     it is not found then it returns the last element
     */
     if(s.find(target)!=s.end()){ // target exist
