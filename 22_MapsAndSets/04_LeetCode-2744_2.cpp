@@ -55,7 +55,7 @@ int maximumNumberOfStringPairs(vector<string>& arr) {  // Time Complexity :- O(n
     return count;
 }
 */
-int maximumNumberOfStringPairs(vector<string>& arr) {  // Time Complexity :- O(n)
+int maximumNumberOfStringPairs(vector<string>& arr){  
     int n = arr.size();
     int count = 0;
     unordered_set<string> s;
