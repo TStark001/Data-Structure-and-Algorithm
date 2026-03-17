@@ -94,12 +94,12 @@ int amountOfTime(Node* root, int start) {
     int maxLevel = 0;
     // BFS
     while(q.size()>0){
-    pair<Node*,int> p = q.front();
-    q.pop();
-    Node* temp = p.first;
-    int level = p.second;
-    maxLevel = max(maxLevel,level);
-    if(temp->left){
+        pair<Node*,int> p = q.front();
+        q.pop();
+        Node* temp = p.first;
+        int level = p.second;
+        maxLevel = max(maxLevel,level);
+        if(temp->left){
             if(s.find(temp->left)==s.end()){
                 q.push({temp->left,level+1});
                 s.insert(temp->left);
