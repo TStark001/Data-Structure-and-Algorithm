@@ -26,46 +26,31 @@ $                       (Method-2 [using binary search])
 #include <iostream>
 #include <vector>
 using namespace std;
-int peakIdx(vector<int> &arr)
-{
+int peakIdx(vector<int> &arr){
     int n = arr.size();
     int lo = 1;
     int hi = n - 2;
-    while (lo <= hi)
-    {
+    while (lo <= hi){
         int mid = lo + (hi - lo) / 2;
-        if (arr[mid] > arr[mid + 1] && arr[mid] > arr[mid - 1])
-        {
-            return mid;
-        }
-        else if (arr[mid] > arr[mid + 1])
-        {
-            hi = mid - 1;
-        }
-        else
-        {
-            lo = mid + 1;
-        }
+        if (arr[mid] > arr[mid + 1] && arr[mid] > arr[mid - 1]) return mid;
+        else if (arr[mid] > arr[mid + 1]) hi = mid - 1;
+        else lo = mid + 1;
     }
     return -1;
 }
-int main()
-{
+int main(){
     // vector<int> arr = {1, 3, 5, 4, 3, 2, 1, 0};
     int n;
     cout << "Enter Size of vector = ";
     cin >> n;
     vector<int> arr(n);
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         cin >> arr[i];
     }
     cout << "Array :- " << "[";
-    for (int i = 0; i < arr.size(); i++)
-    {
+    for (int i = 0; i < arr.size(); i++){
         cout << arr[i];
-        if (i != arr.size() - 1)
-            cout << ",";
+        if (i != arr.size() - 1) cout << ",";
     }
     cout << "]";
     cout << endl;
