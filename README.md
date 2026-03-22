@@ -30,6 +30,7 @@ Data Structure&Algorithm/
 ├── 20_BinaryTree
 ├── 21_BinarySearchTree
 ├── 22_MapsAndSets
+├── 23_Heaps
 └── README.md
 
 ## 🚀 LeetCode Profile
