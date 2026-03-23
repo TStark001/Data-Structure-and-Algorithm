@@ -78,18 +78,20 @@ void print(vector<int> arr){
     }
     cout<<endl;
 }
+Node* maxHeap(Node* root){
+    vector<int> arr;
+    reverseInorder(root,arr);
+    int idx = 0;
+    preorder(root,arr,idx); // BST -> MaxHeap
+    return root;
+}
 
 int main(){
     vector<int> v = {10,5,16,1,8,12,20};
     Node* root = construct(v);
     cout<<"BST befor Maxheap :- "<<endl;
     levelOrder(root);
-    vector<int> arr;
-    reverseInorder(root,arr);
-    cout<<endl<<"ReverseInorder Traversal :- "<<endl;
-    print(arr);
-    int idx = 0;
-    preorder(root,arr,idx); // BST -> MaxHeap
     cout<<endl<<"MaxHeap Tree :- "<<endl;
+    maxHeap(root);
     levelOrder(root);
 }
