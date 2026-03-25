@@ -30,7 +30,7 @@ void heapify(int i , vector<int>& arr , int n){
             }
             else break;
         }
-        else{
+        else{  // (arr[left] > arr[right])
             if(arr[i]>arr[right]){
                 swap(arr[i],arr[right]);
                 i = right;
