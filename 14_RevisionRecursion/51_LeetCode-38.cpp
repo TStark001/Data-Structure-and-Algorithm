@@ -26,23 +26,16 @@
 #include <iostream>
 using namespace std;
 
-string countAndSay(int n)
-{
-    if (n == 1)
-        return "1";
+string countAndSay(int n){
+    if (n == 1) return "1";
     string str = countAndSay(n - 1);
     string ztr = "";
     int freq = 1;
     char ch = str[0];
-    for (int i = 1; i < str.length(); i++)
-    {
+    for (int i = 1; i < str.length(); i++){
         char dh = str[i];
-        if (ch == dh)
-        {
-            freq++;
-        }
-        else
-        {
+        if (ch == dh) freq++;
+        else{
             ztr += (to_string(freq) + ch);
             freq = 1;
             ch = dh;
@@ -52,8 +45,7 @@ string countAndSay(int n)
     return ztr;
 }
 
-int main()
-{
+int main(){
     int n = 4;
     string ans = countAndSay(n);
     cout << ans;
