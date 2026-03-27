@@ -47,9 +47,7 @@ vector<int> kthSmallestPrimeFraction(vector<int>& arr, int k) {
         int i = top.first;
         int j = top.second;
 
-        if(i + 1 < j){
-            pq.push({i+1, j});
-        }
+        if(i + 1 < j) pq.push({i+1, j});
         k--;
     }
 
