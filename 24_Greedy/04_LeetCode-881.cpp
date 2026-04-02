@@ -28,6 +28,7 @@
 using namespace std;
 
 int numRescueBoats(vector<int>& people , int limits){
+    // Time Complexity :- O(nlog n)
     sort(people.begin(),people.end());
     int i = 0 , j = people.size()-1;
     int bt = 0; // boat limits
