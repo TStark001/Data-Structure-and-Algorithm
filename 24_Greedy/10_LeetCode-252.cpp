@@ -46,6 +46,20 @@ bool canAttendMeetings(vector<vector<int>>& intervals){
     }
     return ans == 1;
 }
+/*
+!   Simple and Optimal Approach
+    bool canAttendMeetings(vector<vector<int>>& intervals) {
+        sort(intervals.begin(), intervals.end());
+        
+        for(int i = 1; i < intervals.size(); i++) {
+            if(intervals[i][0] < intervals[i-1][1]) {
+                return false; // overlap found
+            }
+        }
+        
+        return true;
+    }
+*/
 
 int main(){
     vector<vector<int>> interval = {{0,30},{5,10},{15,20}};
